@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <base target="_blank">
+  <meta charset="UTF-8" />
+  <title>Plant Disease Analyzer</title>
+  <link rel="shortcut icon" type="image/png" href="img/assets/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='jquery.particleground.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='demo.js') }}"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
+  
+
+</head>
+
+<body>
+
+<div id="particles">
+  <div id="intro">
+      <h2>Plant Disease Analyzer</h2>
+      <form method="post" enctype="multipart/form-data" action="http://localhost:5000/disease-predict">
+        <label for="file" class="glass-file-input"></label>
+        <input type="file" id="file" name="file" accept="image/*">
+          <br><br>
+          <input type="submit" value="Analyze" class="glass-button">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
